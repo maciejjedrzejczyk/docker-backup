@@ -1,0 +1,27 @@
+version: '3.9'
+
+services:
+  freshrss:
+    networks: 
+      - freshrss
+    container_name: freshrss
+    hostname: freshrss
+    image: lscr.io/linuxserver/freshrss
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/London
+      - COMPOSE_PROJECT_NAME=freshrss
+    restart: always
+    ports:
+      - 8901:80
+    volumes:
+      - freshrss:/config
+
+volumes:
+  freshrss:
+    name: freshrss
+
+networks:
+  freshrss:
+    name: freshrss
