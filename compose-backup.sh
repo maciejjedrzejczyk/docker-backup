@@ -8,7 +8,7 @@ echo "This script will create a new backup for a docker volume used by ${PWD##*/
 echo
 echo "Set environment variables"
 
-source variables.sh
+sh $PWD/variables.sh
 
 echo
 echo "Delete all backups which are older than 14 days"

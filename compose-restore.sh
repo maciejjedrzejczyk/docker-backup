@@ -10,7 +10,7 @@ echo "This script will back up existing volume for for ${PWD##*/}, delete it and
 echo
 echo "Set environment variables"
 
-source variables.sh
+sh $PWD/variables.sh
 
 echo
 echo "Turn off a ${PWD##*/} project before backing up data"

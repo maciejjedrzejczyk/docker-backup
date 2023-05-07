@@ -3,7 +3,7 @@
 echo
 echo "Set environment variables"
 
-source variables.sh
+sh $PWD/variables.sh
 
 echo "This script will stop $COMPOSE_PROJ_NAME container project"
 
